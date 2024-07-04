@@ -1372,7 +1372,7 @@ body {
     content: '';
     display: block;
     position: absolute;
-    width: 256px;
+    width: 200px;
     height: 165px;
     background-image: url(../images/eclipse-right.png);
     background-repeat: no-repeat;
