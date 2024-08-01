@@ -258,6 +258,34 @@ body {
     height: 100%;
   }
 }
+#es-garnier.es-garnier .es-evaluation {
+  background-color: #00b2d9;
+}
+
+#es-garnier.es-garnier .es-evaluation__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#es-garnier.es-garnier .es-evaluation__text {
+  color: #fff;
+  text-align: center;
+}
+#es-garnier.es-garnier .es-evaluation__packshot {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  height: 250px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#es-garnier.es-garnier .es-evaluation__text-subtitle {
+  font-weight: 600;
+}
 #es-garnier.es-garnier .es-ingredients {
   padding: 16px;
 }
@@ -284,7 +312,7 @@ body {
   content: 'po';
   position: absolute;
   bottom: 25%;
-  right: 25%;
+  right: 33%;
   font-weight: 700;
   font-size: 12px;
   color: #fff;
@@ -325,7 +353,7 @@ body {
   font-size: 12px;
   padding-top: 16px;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
 }
 #es-garnier.es-garnier .es-ingredients__title {
   text-transform: uppercase;
@@ -395,12 +423,12 @@ body {
 }
 @media screen and (min-width: 600px) {
   #es-garnier.es-garnier .es-ingredients__packshot::before {
-    left: 28%;
+    left: 18%;
     font-size: 18px;
     font-weight: 600;
   }
   #es-garnier.es-garnier .es-ingredients__packshot::after {
-    right: 26%;
+    right: 35%;
     font-size: 18px;
     font-weight: 600;
   }
@@ -635,6 +663,7 @@ body {
   padding: 16px;
 }
 #es-garnier.es-garnier .es-color__title {
+  margin-bottom: 10px;
   font-weight: 800;
   font-size: 24px;
   text-transform: uppercase;
@@ -642,8 +671,9 @@ body {
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 #es-garnier.es-garnier .es-color__subtitle {
+  margin-top: 0;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
   color: #000;
 }
@@ -771,6 +801,24 @@ body {
     min-width: 160px;
     font-size: 11px;
     text-align: center;
+  }
+  #es-garnier.es-garnier .es-evaluation__left {
+    flex-direction: row;
+    max-width: 50%;
+  }
+  #es-garnier.es-garnier .es-evaluation__text {
+    max-width: 300px;
+  }
+  #es-garnier.es-garnier .es-evaluation__packshot {
+    max-width: 100px;
+  }
+  #es-garnier.es-garnier .es-evaluation {
+    max-width: 95%;
+    margin: 0 auto;
+    background: url('../images/evaluation-bg.png') no-repeat right center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
   }
 }
 @media screen and (min-width: 998px) {
@@ -1173,9 +1221,15 @@ body {
   }
   #es-garnier.es-garnier .es-ingredients {
     margin: 0 auto;
+    padding-top: 150px;
+    margin-top: -70px;
+    background: url('../images/ingredients-circle.png') no-repeat;
+    background-size: 40%;
+    background-position: right 0%;
   }
   #es-garnier.es-garnier .es-ingredients__title {
-    font-size: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
     margin-left: 10%;
     text-align: left;
   }
@@ -1251,7 +1305,7 @@ body {
     content: '';
     position: absolute;
     background: url('../images/steps-line.png') no-repeat center;
-    width: 191px;
+    width: 150px;
     height: 2px;
     bottom: 0;
     left: 8%;
@@ -1287,10 +1341,10 @@ body {
     content: '';
     position: absolute;
     background: url('../images/steps-line.png') no-repeat center;
-    width: 189px;
+    width: 158px;
     height: 2px;
     bottom: 0;
-    left: 15%;
+    left: 28%;
   }
   #es-garnier.es-garnier .es-cross__steps-item-step {
     font-size: 16px;
@@ -1355,6 +1409,7 @@ body {
   }
   #es-garnier.es-garnier .es-color__pseudo {
     position: relative;
+    margin-bottom: 60px;
   }
   #es-garnier.es-garnier .es-color__pseudo::before {
     content: '';
@@ -1386,7 +1441,6 @@ body {
   }
   #es-garnier.es-garnier .es-routine {
     position: relative;
-    margin-bottom: 30px;
   }
   #es-garnier.es-garnier .es-routine__steps {
     flex-direction: row;
@@ -1411,11 +1465,13 @@ body {
     z-index: 3;
   }
   #es-garnier.es-garnier .es-ingredients__packshot::before {
-    left: 30%;
+    left: 15%;
+    bottom: 20%;
     font-size: 15px;
   }
   #es-garnier.es-garnier .es-ingredients__packshot::after {
-    right: 26%;
+    right: 30%;
+    bottom: 20%;
     font-size: 15px;
   }
 }
