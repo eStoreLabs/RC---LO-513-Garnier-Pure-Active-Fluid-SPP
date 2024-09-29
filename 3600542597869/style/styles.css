@@ -1,5 +1,3 @@
-@charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap');
 html,
 body {
   margin: 0;
@@ -103,12 +101,30 @@ body {
 }
 #es-garnier.es-garnier .es-kv__subtitle::before {
   position: absolute;
-  content: url('../images/point.png');
   width: 1px;
   height: 1px;
   top: -3px;
   left: -3px;
 }
+#es-garnier.es-garnier .es-kv__subtitle-dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  bottom: 45%;
+  left: -3px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  min-height: 0 !important;
+}
+
+#es-garnier.es-garnier .es-kv__subtitle-dot--2 {
+  bottom: 28%;
+}
+
+#es-garnier.es-garnier .es-kv__subtitle-dot--3 {
+  bottom: 12%;
+}
+
 #es-garnier.es-garnier .es-kv__subtitle--crossed {
   text-decoration: line-through;
 }
@@ -148,10 +164,29 @@ body {
   font-size: 30px;
   font-weight: bold;
 }
+#es-garnier.es-garnier .es-kv__label-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+#es-garnier.es-garnier .es-kv__label--before,
+#es-garnier.es-garnier .es-kv__label--after {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100px;
+}
+#es-garnier.es-garnier .es-kv__label--after {
+  left: auto;
+  top: 15%;
+  right: 25%;
+  transform: rotate(180deg);
+}
+
 #es-garnier.es-garnier .es-kv__label::before {
   position: absolute;
   content: '';
-  background: url('../images/label-bracket.png') no-repeat;
   background-size: 80%;
   width: 25px;
   height: 125px;
@@ -161,7 +196,6 @@ body {
 #es-garnier.es-garnier .es-kv__label::after {
   position: absolute;
   content: '';
-  background: url('../images/label-bracket.png') no-repeat;
   background-size: 80%;
   transform: rotate(180deg);
   width: 25px;
@@ -174,18 +208,7 @@ body {
   padding: 0;
   position: relative;
 }
-#es-garnier.es-garnier .es-kv__accent2::before,
-#es-garnier.es-garnier .es-kv__accent2::after {
-  content: url(../images/square\ bracket\ open.png);
-  color: #e75e1c;
-  position: absolute;
-  top: 35%;
-  left: 0;
-}
-#es-garnier.es-garnier .es-kv__accent2::after {
-  content: url(../images/square\ bracket\ close.png);
-  right: -200px;
-}
+
 @media screen and (min-width: 425px) {
   #es-garnier.es-garnier .es-kv__title {
     font-size: 22px;
@@ -196,70 +219,13 @@ body {
     margin-bottom: 15px;
   }
 }
-@media screen and (min-width: 768px) {
-  #es-garnier.es-garnier .es-kv {
-    margin-bottom: 32px;
-  }
-  #es-garnier.es-garnier .es-kv__container {
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  #es-garnier.es-garnier .es-kv__label {
-    position: absolute;
-    left: 47%;
-    top: 25%;
-    z-index: 10;
-    font-size: 10px;
-  }
-  #es-garnier.es-garnier .es-kv__label-percent {
-    margin-bottom: 0;
-  }
-  #es-garnier.es-garnier .es-kv__label::before,
-  #es-garnier.es-garnier .es-kv__label::after {
-    background-size: 60%;
-    height: 76px;
-  }
-  #es-garnier.es-garnier .es-kv__label::after {
-    top: 4px;
-  }
-  #es-garnier.es-garnier .es-kv__title {
-    font-size: 18px;
-    margin-bottom: 25px;
-  }
-  #es-garnier.es-garnier .es-kv__subtitle {
-    font-size: 12px;
-    margin-left: 10px;
-  }
-  #es-garnier.es-garnier .es-kv__photo {
-    display: flex;
-  }
-  #es-garnier.es-garnier .es-kv__content {
-    position: relative;
-    z-index: 1;
-    margin-top: 0;
-    padding-bottom: 0;
-    display: flex;
-  }
-  #es-garnier.es-garnier .es-kv__content img {
-    min-height: 280px;
-  }
-  #es-garnier.es-garnier .es-kv__image {
-    flex-grow: 1;
-  }
-  #es-garnier.es-garnier .es-kv__packshot {
-    margin-top: -262px;
-  }
-  #es-garnier.es-garnier .es-kv__img--photo {
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: 12%;
-    object-position: 12%;
-    height: 100%;
-  }
-}
+
 #es-garnier.es-garnier .es-evaluation {
   background-color: #00b2d9;
+}
+
+#es-garnier.es-garnier .es-evaluation__bg {
+  display: none;
 }
 
 #es-garnier.es-garnier .es-evaluation__left {
@@ -288,6 +254,9 @@ body {
 }
 #es-garnier.es-garnier .es-ingredients {
   padding: 16px;
+}
+#es-garnier.es-garnier .es-ingredients__bg {
+  display: none;
 }
 #es-garnier.es-garnier .es-ingredients__packshot {
   position: relative;
@@ -433,19 +402,6 @@ body {
     font-weight: 600;
   }
 }
-@media screen and (min-width: 850px) {
-  #es-garnier.es-garnier .es-ingredients__cards {
-    flex-direction: column;
-    max-width: 300px;
-    flex-wrap: wrap;
-  }
-  #es-garnier.es-garnier .es-ingredients__img-title {
-    display: block;
-    margin-left: -10%;
-    margin-top: -20px;
-    text-align: center;
-  }
-}
 #es-garnier.es-garnier .es-active-ingredients__title {
   text-transform: uppercase;
   text-align: center;
@@ -485,98 +441,44 @@ body {
 #es-garnier.es-garnier .es-active-ingredients__image--desktop {
   display: none;
 }
+#es-garnier.es-garnier .es-active-ingredients__item-title-blue--before {
+  display: none;
+  position: absolute;
+  top: -21%;
+  left: -9%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#es-garnier.es-garnier .es-active-ingredients__item-title-blue--after {
+  display: none;
+  position: absolute;
+  top: -21%;
+  left: 42%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#es-garnier.es-garnier .es-active-ingredients__item-title-white--before {
+  display: none;
+  position: absolute;
+  top: -15%;
+  right: 85%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 180px;
+}
+
+#es-garnier.es-garnier .es-active-ingredients__item-title-white--after {
+  display: none;
+  position: absolute;
+  top: -14%;
+  right: -10%;
+  height: 57px;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 @media screen and (min-width: 600px) {
-  #es-garnier.es-garnier .es-active-ingredients__container {
-    position: relative;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item {
-    position: absolute;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item--left {
-    top: 50%;
-    left: 8%;
-    transform: translate(0, -50%);
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item--right {
-    right: 2%;
-    top: 50%;
-    transform: translate(0%, -50%);
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title {
-    margin-bottom: 35px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--blue {
-    text-align: left;
-    color: #0499c3;
-    position: relative;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--blue::before {
-    position: absolute;
-    content: '';
-    background: url('../images/active-bracket-blue-before.png') no-repeat;
-    display: block;
-    top: -15px;
-    left: -20px;
-    width: 30px;
-    height: 65px;
-    background-size: 74%;
-    margin-bottom: 10px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--blue::after {
-    position: absolute;
-    content: '';
-    background: url('../images/active-bracket-blue-after.png') no-repeat;
-    display: block;
-    top: -15px;
-    right: -45%;
-    width: 209px;
-    height: 65px;
-    background-size: 70%;
-    margin-bottom: 10px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--white {
-    text-align: right;
-    color: #fff;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--white::before {
-    position: absolute;
-    content: '';
-    background: url('../images/active-bracket-white-before.png') no-repeat;
-    display: block;
-    top: -6px;
-    right: 49%;
-    width: 208px;
-    height: 67px;
-    background-size: 74%;
-    margin-bottom: 10px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--white::after {
-    position: absolute;
-    content: '';
-    background: url('../images/active-bracket-white-after.png') no-repeat;
-    display: block;
-    top: -6px;
-    right: -14%;
-    width: 32px;
-    height: 65px;
-    background-size: 74%;
-    margin-bottom: 10px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-description {
-    font-size: 12px;
-    margin-left: -20px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-description--right {
-    text-align: right;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__image--mobile {
-    display: none;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__image--desktop {
-    display: block;
-  }
 }
 @media screen and (min-width: 850px) {
   #es-garnier.es-garnier .es-active-ingredients__item-description {
@@ -793,45 +695,7 @@ body {
   margin: 0 auto;
   max-width: 100%;
 }
-@media screen and (min-width: 700px) {
-  #es-garnier.es-garnier .es-routine__step-compare {
-    min-width: 325px;
-  }
-  #es-garnier.es-garnier .es-routine__step-group-item {
-    min-width: 160px;
-    font-size: 11px;
-    text-align: center;
-  }
-  #es-garnier.es-garnier .es-evaluation__left {
-    flex-direction: row;
-    max-width: 50%;
-  }
-  #es-garnier.es-garnier .es-evaluation__text {
-    max-width: 300px;
-  }
-  #es-garnier.es-garnier .es-evaluation__packshot {
-    max-width: 100px;
-  }
-  #es-garnier.es-garnier .es-evaluation {
-    max-width: 95%;
-    margin: 0 auto;
-    background: url('../images/evaluation-bg.png') no-repeat right center;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
-  }
-}
-@media screen and (min-width: 998px) {
-  #es-garnier.es-garnier .es-routine__steps {
-    background: linear-gradient(
-      to right,
-      #85cfec 0%,
-      #85cfec 50%,
-      #fee955 50%,
-      #fee955 100%
-    );
-  }
-}
+
 #es-garnier.es-garnier .es-cross {
   position: relative;
   z-index: 1;
@@ -1074,7 +938,193 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-@media screen and (min-width: 768px) {
+
+@media screen and (min-width: 1200px) {
+  #es-garnier.es-garnier .es-active-ingredients__container {
+    position: relative;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item {
+    position: absolute;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item--left {
+    top: 50%;
+    left: 8%;
+    transform: translate(0, -50%);
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item--right {
+    right: 2%;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item-title {
+    margin-bottom: 35px;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item-title--blue {
+    text-align: left;
+    color: #0499c3;
+    position: relative;
+  }
+
+  #es-garnier.es-garnier .es-active-ingredients__item-title--white {
+    text-align: right;
+    color: #fff;
+  }
+
+  #es-garnier.es-garnier .es-active-ingredients__item-description {
+    font-size: 12px;
+    margin-left: -20px;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item-description--right {
+    text-align: right;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__image--mobile {
+    display: none;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__image--desktop {
+    display: block;
+  }
+
+  /* 600px */
+
+  #es-garnier.es-garnier .es-routine__step-compare {
+    min-width: 325px;
+  }
+  #es-garnier.es-garnier .es-routine__step-group-item {
+    min-width: 160px;
+    font-size: 11px;
+    text-align: center;
+  }
+  #es-garnier.es-garnier .es-evaluation__left {
+    flex-direction: row;
+    max-width: 50%;
+  }
+  #es-garnier.es-garnier .es-evaluation__text {
+    max-width: 300px;
+    z-index: 1;
+    position: relative;
+  }
+  #es-garnier.es-garnier .es-evaluation__packshot {
+    max-width: 100px;
+    z-index: 1;
+    position: relative;
+  }
+  #es-garnier.es-garnier .es-evaluation {
+    max-width: 95%;
+    margin: 0 auto;
+    background-size: cover;
+    position: relative;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  #es-garnier.es-garnier .es-evaluation__bg {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  /* 700px */
+
+  #es-garnier.es-garnier .es-kv {
+    margin-bottom: 32px;
+  }
+  #es-garnier.es-garnier .es-kv__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  #es-garnier.es-garnier .es-kv__label-wrapper {
+    position: absolute;
+    left: 47%;
+    top: 25%;
+    z-index: 10;
+  }
+  #es-garnier.es-garnier .es-kv__label {
+    font-size: 10px;
+  }
+  #es-garnier.es-garnier .es-kv__label--before {
+    left: 10%;
+    height: 78px;
+  }
+  #es-garnier.es-garnier .es-kv__label--after {
+    right: 10%;
+    height: 78px;
+  }
+  #es-garnier.es-garnier .es-kv__label-percent {
+    margin-bottom: 0;
+  }
+  #es-garnier.es-garnier .es-kv__label::before,
+  #es-garnier.es-garnier .es-kv__label::after {
+    background-size: 60%;
+    height: 76px;
+  }
+  #es-garnier.es-garnier .es-kv__label::after {
+    top: 4px;
+  }
+  #es-garnier.es-garnier .es-kv__title {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  #es-garnier.es-garnier .es-kv__subtitle {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  #es-garnier.es-garnier .es-kv__photo {
+    display: flex;
+  }
+  #es-garnier.es-garnier .es-kv__content {
+    position: relative;
+    z-index: 1;
+    margin-top: 0;
+    padding-bottom: 0;
+    display: flex;
+  }
+  #es-garnier.es-garnier .es-kv__content img {
+    min-height: 280px;
+  }
+  #es-garnier.es-garnier .es-kv__image {
+    flex-grow: 1;
+  }
+  #es-garnier.es-garnier .es-kv__packshot {
+    margin-top: -262px;
+  }
+  #es-garnier.es-garnier .es-kv__img--photo {
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 12%;
+    object-position: 12%;
+    height: 100%;
+  }
+
+  #es-garnier.es-garnier .es-ingredients__cards {
+    flex-direction: column;
+    max-width: 300px;
+    flex-wrap: wrap;
+  }
+  #es-garnier.es-garnier .es-ingredients__img-title {
+    display: block;
+    margin-left: -10%;
+    margin-top: -20px;
+    text-align: center;
+  }
+
+  #es-garnier.es-garnier .es-routine__steps {
+    background: linear-gradient(
+      to right,
+      #85cfec 0%,
+      #85cfec 50%,
+      #fee955 50%,
+      #fee955 100%
+    );
+  }
   #es-garnier.es-garnier .es-apply {
     max-width: 900px;
     margin: 0 auto;
@@ -1211,8 +1261,7 @@ body {
     margin-top: 30px;
     width: 180px;
   }
-}
-@media screen and (min-width: 860px) {
+
   #es-garnier.es-garnier .es-active-ingredients__title,
   #es-garnier.es-garnier .es-apply__title,
   #es-garnier.es-garnier .es-routine__title,
@@ -1223,10 +1272,21 @@ body {
     margin: 0 auto;
     padding-top: 150px;
     margin-top: -70px;
-    background: url('../images/ingredients-circle.png') no-repeat;
     background-size: 40%;
     background-position: right 0%;
+    position: relative;
   }
+  #es-garnier.es-garnier .es-ingredients__bg {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 40%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
   #es-garnier.es-garnier .es-ingredients__title {
     margin-bottom: 30px;
     font-size: 18px;
@@ -1362,8 +1422,6 @@ body {
   #es-garnier.es-garnier .es-apply__desc {
     font-size: 12px;
   }
-}
-@media screen and (min-width: 998px) {
   #es-garnier.es-garnier .es-info__title {
     font-size: 22px;
   }
@@ -1473,6 +1531,27 @@ body {
     right: 30%;
     bottom: 20%;
     font-size: 15px;
+  }
+  #es-garnier.es-garnier .es-kv__subtitle-dot {
+    bottom: 52%;
+    left: 7px;
+  }
+
+  #es-garnier.es-garnier .es-kv__subtitle-dot--2 {
+    bottom: 35%;
+  }
+
+  #es-garnier.es-garnier .es-kv__subtitle-dot--3 {
+    bottom: 20%;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item-title-blue--before,
+  #es-garnier.es-garnier .es-active-ingredients__item-title-blue--after {
+    display: block;
+  }
+
+  #es-garnier.es-garnier .es-active-ingredients__item-title-white--before,
+  #es-garnier.es-garnier .es-active-ingredients__item-title-white--after {
+    display: block;
   }
 }
 
