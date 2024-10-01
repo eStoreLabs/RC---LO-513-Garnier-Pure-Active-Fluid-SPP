@@ -19,24 +19,6 @@ body {
   color: #111;
   background: #fff;
   max-width: 731px;
-  /*****************************************/
-  /********* kv styles / hero styles *******/
-  /*****************************************/
-  /*********************************************/
-  /************ ingredients styles *************/
-  /*********************************************/
-  /*********************************************/
-  /************ apply section styles ***********/
-  /*********************************************/
-  /*********************************************/
-  /************ color section styles ***********/
-  /*********************************************/
-  /*********************************************/
-  /************ routine section styles ***********/
-  /*********************************************/
-  /*********************************************/
-  /********** cross sell section styles ********/
-  /*********************************************/
 }
 #es-garnier.es-garnier .es-color__pseudo-bg,
 #es-garnier.es-garnier .es-color__pseudo-bg-2 {
@@ -65,7 +47,7 @@ body {
   text-align: center;
   position: absolute;
   left: 55%;
-  top: 33%;
+  top: 25%;
 }
 #es-garnier.es-garnier .es-kv__img {
   display: block;
@@ -84,7 +66,7 @@ body {
   text-transform: uppercase;
   line-height: 1;
   color: #0499c3;
-  font-size: 16px;
+  font-size: 14px;
   position: relative;
   z-index: 1;
   text-align: left;
@@ -176,7 +158,7 @@ body {
 #es-garnier.es-garnier .es-kv__label--after {
   position: absolute;
   top: 15%;
-  left: 25%;
+  left: 20%;
   -o-object-fit: cover;
   object-fit: cover;
   height: 100px;
@@ -184,7 +166,7 @@ body {
 #es-garnier.es-garnier .es-kv__label--after {
   left: auto;
   top: 15%;
-  right: 25%;
+  right: 20%;
   transform: rotate(180deg);
 }
 
@@ -211,17 +193,6 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-}
-
-@media screen and (min-width: 425px) {
-  #es-garnier.es-garnier .es-kv__title {
-    font-size: 22px;
-    margin-bottom: 20px;
-  }
-  #es-garnier.es-garnier .es-kv__subtitle {
-    font-size: 12px;
-    margin-bottom: 15px;
-  }
 }
 
 #es-garnier.es-garnier .es-evaluation {
@@ -398,25 +369,7 @@ body {
   text-align: center;
   width: 100%;
 }
-@media screen and (min-width: 500px) {
-  #es-garnier.es-garnier .es-ingredients__cards {
-    flex-direction: row;
-    max-width: 300px;
-    flex-wrap: nowrap;
-  }
-}
-@media screen and (min-width: 600px) {
-  #es-garnier.es-garnier .es-ingredients__packshot::before {
-    left: 18%;
-    font-size: 18px;
-    font-weight: 600;
-  }
-  #es-garnier.es-garnier .es-ingredients__packshot::after {
-    right: 35%;
-    font-size: 18px;
-    font-weight: 600;
-  }
-}
+
 #es-garnier.es-garnier .es-active-ingredients__title {
   text-transform: uppercase;
   text-align: center;
@@ -494,25 +447,6 @@ body {
   object-fit: cover;
 }
 
-@media screen and (min-width: 850px) {
-  #es-garnier.es-garnier .es-active-ingredients__item-description {
-    font-size: 12px;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item--left {
-    top: 50%;
-    left: 8%;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item--right {
-    right: 3%;
-    top: 50%;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--blue::after {
-    right: -44%;
-  }
-  #es-garnier.es-garnier .es-active-ingredients__item-title--white::before {
-    right: 40%;
-  }
-}
 #es-garnier.es-garnier .es-apply {
   margin: 48px 0;
 }
@@ -703,6 +637,8 @@ body {
   max-width: 150px;
   font-size: 11px;
   text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #es-garnier.es-garnier .es-routine__step-image {
   width: 100%;
@@ -816,6 +752,12 @@ body {
 #es-garnier.es-garnier .es-cross__steps-item {
   min-width: 250px;
   padding-left: 20px;
+}
+#es-garnier.es-garnier .es-cross__steps-item--1-bg,
+#es-garnier.es-garnier .es-cross__steps-item--2-bg,
+#es-garnier.es-garnier .es-cross__steps-item--3-bg,
+#es-garnier.es-garnier .es-cross__steps-item--4-bg {
+  width: 250px;
 }
 #es-garnier.es-garnier .es-cross__steps-item--1 {
   order: 1;
@@ -958,6 +900,304 @@ body {
   justify-content: space-evenly;
 }
 
+#es-garnier.es-garnier #es-intro__left {
+  max-width: 80%;
+}
+
+#es-garnier.es-garnier
+  .es-cross__slider
+  .es-cross__product:hover
+  .es-cross__img {
+  transform: scale(1.025);
+}
+
+#es-garnier.es-garnier
+  .es-cross__slider
+  .es-cross__product:hover
+  .es-cross__link {
+  background: #f47435;
+}
+
+#es-garnier.es-garnier
+  .es-cross
+  .swiper-container-horizontal
+  > .swiper-pagination-bullets,
+#es-garnier.es-garnier .es-cross .swiper-pagination-custom,
+#es-garnier.es-garnier .es-cross .swiper-pagination-fraction {
+  bottom: 0px;
+}
+
+#es-garnier.es-garnier .es-cross .swiper-cross-pagination {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+#es-garnier.es-garnier .es-cross .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #000;
+  opacity: 1;
+}
+
+#es-garnier.es-garnier .es-cross .swiper-pagination-bullet:not(:last-child) {
+  margin-right: 6px;
+}
+
+#es-garnier.es-garnier .es-cross .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #000;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '';
+  text-align: center;
+  opacity: 0.25;
+  color: black;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 50%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  color: black;
+}
+
+@media screen and (min-width: 425px) {
+  #es-garnier.es-garnier .es-kv__title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  #es-garnier.es-garnier .es-kv__subtitle {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  #es-garnier.es-garnier .es-ingredients__cards {
+    flex-direction: row;
+    max-width: 300px;
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #es-garnier.es-garnier .es-ingredients__packshot::before {
+    left: 18%;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  #es-garnier.es-garnier .es-ingredients__packshot::after {
+    right: 35%;
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #es-garnier.es-garnier .es-active-ingredients__item-description {
+    font-size: 12px;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item--left {
+    top: 50%;
+    left: 8%;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item--right {
+    right: 3%;
+    top: 50%;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item-title--blue::after {
+    right: -44%;
+  }
+  #es-garnier.es-garnier .es-active-ingredients__item-title--white::before {
+    right: 40%;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   #es-garnier.es-garnier .es-active-ingredients__container {
     position: relative;
@@ -1005,8 +1245,6 @@ body {
     display: block;
   }
 
-  /* 600px */
-
   #es-garnier.es-garnier .es-routine__step-compare {
     min-width: 325px;
   }
@@ -1049,7 +1287,6 @@ body {
     -o-object-fit: cover;
     object-fit: cover;
   }
-  /* 700px */
 
   #es-garnier.es-garnier .es-kv {
     margin-bottom: 32px;
@@ -1547,255 +1784,4 @@ body {
   }
 }
 
-#es-garnier.es-garnier #es-intro__left {
-  max-width: 80%;
-}
-
-#es-garnier.es-garnier
-  .es-cross__slider
-  .es-cross__product:hover
-  .es-cross__img {
-  transform: scale(1.025);
-}
-
-#es-garnier.es-garnier
-  .es-cross__slider
-  .es-cross__product:hover
-  .es-cross__link {
-  background: #f47435;
-}
-
-#es-garnier.es-garnier
-  .es-cross
-  .swiper-container-horizontal
-  > .swiper-pagination-bullets,
-#es-garnier.es-garnier .es-cross .swiper-pagination-custom,
-#es-garnier.es-garnier .es-cross .swiper-pagination-fraction {
-  bottom: 0px;
-}
-
-#es-garnier.es-garnier .es-cross .swiper-cross-pagination {
-  position: absolute;
-  bottom: -32px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-}
-
-#es-garnier.es-garnier .es-cross .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #000;
-  opacity: 1;
-}
-
-#es-garnier.es-garnier .es-cross .swiper-pagination-bullet:not(:last-child) {
-  margin-right: 6px;
-}
-
-#es-garnier.es-garnier .es-cross .swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #000;
-}
-
-/******************************************************************/
-/******************** slick carousel styles ***********************/
-/******************************************************************/
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.slick-list:focus {
-  outline: none;
-}
-
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slick-track:before,
-.slick-track:after {
-  display: table;
-  content: '';
-}
-
-.slick-track:after {
-  clear: both;
-}
-
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-  height: 100%;
-  min-height: 1px;
-}
-
-[dir='rtl'] .slick-slide {
-  float: right;
-}
-
-.slick-slide img {
-  display: block;
-}
-
-.slick-slide.slick-loading img {
-  display: none;
-}
-
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-  display: block;
-}
-
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-  display: block;
-  height: auto;
-  border: 1px solid transparent;
-}
-
-.slick-arrow.slick-hidden {
-  display: none;
-}
-
-/* slick carousel arrows */
-.slick-prev,
-.slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  transform: translate(0, -50%);
-  cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-/* slick carousel dots */
-.slick-dotted.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-dots {
-  position: absolute;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.slick-dots li {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
-}
-
-.slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-
-.slick-dots li button:hover,
-.slick-dots li button:focus {
-  outline: none;
-}
-
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
-  opacity: 1;
-}
-
-.slick-dots li button:before {
-  font-family: 'slick';
-  font-size: 6px;
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  content: '';
-  /* content: '•'; */
-  text-align: center;
-  opacity: 0.25;
-  color: black;
-  cursor: pointer;
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border: 1px solid #000;
-  border-radius: 50%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: black;
-} /*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map */
