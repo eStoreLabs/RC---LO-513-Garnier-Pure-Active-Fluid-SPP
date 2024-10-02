@@ -826,6 +826,9 @@ body {
   margin: 0 auto;
   transition: all 0.3s ease-in-out;
 }
+#es-garnier.es-garnier .es-cross .es-swiper1-pagination {
+  bottom: -10px;
+}
 #es-garnier.es-garnier .es-cross .swiper-cross-button-prev:after,
 #es-garnier.es-garnier
   .es-cross
@@ -1433,6 +1436,7 @@ body {
   #es-garnier.es-garnier .es-cross {
     margin: 0 auto;
   }
+  #es-garnier.es-garnier .es-swiper1,
   #es-garnier.es-garnier .es-cross__slider,
   #es-garnier.es-garnier .es-cross__pagination {
     display: none;

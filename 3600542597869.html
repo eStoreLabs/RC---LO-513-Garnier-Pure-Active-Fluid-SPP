@@ -4,11 +4,8 @@
   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;800&display=swap"
   rel="stylesheet"
 />
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-/>
+
+<link rel="stylesheet" href="{{base_url}}3600542597869/style/swiper.css" />
 <link rel="stylesheet" href="{{base_url}}3600542597869/style/styles.css" />
 
 <div class="es-garnier" id="es-garnier">
@@ -384,7 +381,7 @@
       </div>
 
       <!-- JS slider, dwa razy to samo! -->
-      <div class="swiper-cross es-cross__slider">
+      <div class="swiper-cross es-cross__slider es-swiper1">
         <div class="swiper-wrapper es-slick-carousel">
           <div class="swiper-slide es-slider__slide">
             <div class="es-cross__product">
@@ -490,6 +487,8 @@
           </div>
         </div>
       </div>
+      <div class="swiper-pagination es-swiper1-pagination"></div>
+
       <div class="slick-pagination es-cross__pagination"></div>
 
       <div class="es-cross__container">
@@ -714,4 +713,19 @@
 ></script>
 
 <!-- slick settings and script to make it run -->
-<script src="{{base_url}}3600542597869/scripts/script.js"></script>
+<script src="{{base_url}}3600542597869/scripts/slider.js"></script>
+<script>
+  const swiper = new Swiper('.es-swiper1', {
+    loop: true,
+    autoHeight: false,
+
+    navigation: {
+      nextEl: '.es-swiper1-button-next',
+      prevEl: '.es-swiper1-button-prev',
+    },
+    pagination: {
+      el: '.es-swiper1-pagination',
+      clickable: true,
+    },
+  });
+</script>
